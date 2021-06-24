@@ -1,0 +1,497 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-family: Palatino, URW Palladio L, serif;
+    border-left: 5px;
+    border-right: 5px;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+nav.navbar {
+    background-color: pink;
+    border-color: white;
+    border-width: 10px;
+    position: fixed;
+    width: 100vw;
+
+}
+
+
+ /*Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+  
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 5px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 5px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    height: 100%;
+    background-image: url('../images/festivalbg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*
+  background-color: blue;
+  background: url('images/lazerBackground.gif') repeat-y 100% 100% fixed;
+  background-size: contain;
+  
+  */
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: Palatino, URW Palladio L, serif;
+
+}
+
+.bodycontiner{
+    padding-top: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: pink;
+}
+
+/*Sign in page*/
+
+.loginPanel{
+    display:flex;
+    justify-content: left;
+}
+
+
+/*CSS for all festivals
+
+#festivalThumb{
+    width : 33%
+}
+
+*/
+section {
+    flex: 0 0 75%;
+    display: flex;
+}
+
+.noflex {
+    display: block;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    background-color: pink;
+}
+
+section > div.festivalThumb {
+    padding: 10px;
+    width: calc((100% / 4));
+}
+
+section > div > h3 > a {
+    font-weight: 100;
+    margin: 0 0 15px 0;
+    color: #000;
+    text-decoration: none;
+    font-family: Palatino, URW Palladio L, serif;
+}
+
+div.festivalThumb > div {
+    overflow: hidden;
+}
+
+.cover {
+    object-fit: cover;
+    height: 200px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+div.festivalThumb > div > a > img {
+    object-fit: contain;
+    max-width: 300px;
+    transition: all 0.5s;
+}
+
+ div.festivalThumb > div > a > img:hover {
+      transform: scale(1.2,1.2);
+ }
+
+
+.searchBar {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    font-family: Palatino, URW Palladio L, serif;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*SHOPPING CART CSS*/
+
+.shopping-cart {
+    width: 750px;
+    height: auto;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title {
+    height: 60px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.item {
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+    
+}
+
+.item img{
+    object-fit: contain;
+    max-width: 100px;
+}
+
+.item:nth-child(3) {
+    border-top: 1px solid #E1E8EE;
+    border-bottom: 1px solid #E1E8EE;
+}
+
+
+
+.buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+}
+
+.delete-btn {
+    display: inline-block;
+    Cursor: pointer;
+}
+
+.delete-btn {
+    width: 18px;
+    height: 17px;
+    background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
+}
+
+.is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.image {
+    margin-right: 50px;
+}
+
+.description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+}
+
+.description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+}
+
+.description span:first-child {
+    margin-bottom: 5px;
+}
+
+
+.quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+}
+
+    .quantity input {
+        -webkit-appearance: none;
+        border: none;
+        text-align: center;
+        width: 32px;
+        font-size: 16px;
+        color: #43484D;
+        font-weight: 300;
+    }
+
+button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.minus-btn img {
+    margin-bottom: 3px;
+}
+
+.plus-btn img {
+    margin-top: 2px;
+}
+
+button:focus,
+input:focus {
+    outline: 0;
+}
+
+.total-price {
+    width: 83px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+.basket-price {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.emptyBag {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+}
+
+@media (max-width: 800px) {
+    .shopping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .item {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image img {
+        width: 10%;
+    }
+
+    .image,
+    .quantity,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+
+    .buttons {
+        margin-right: 20px;
+    }
+}
+
+
+/*ONE FESTIVAL CSS*/
+
+
+.festivalLogo {
+    padding: 50px;
+}
+
+.oneFest {
+   /* background-image: url('../images/festivalbg.png');*/
+}
+
+.festivalInfo {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    height: 450px;
+    opacity: 0.9;
+
+}
+
+.festContainer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+}
+
+
+/*  
+    
+    .festivalMap{
+    float:right;
+}*/
+
+.lineup_Btn{
+    background-color: plum;
+    font-size: 30px;
+    margin: 10px;
+    opacity: 1.5;
+}
+
+
+.add_Btn {
+    margin: 10px;
+    background-color: violet;
+    font-size: 30px;
+    opacity: 1.5;
+}
+
+.glow-on-hover {
+    margin: 10px;
+    font-size: 30px;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

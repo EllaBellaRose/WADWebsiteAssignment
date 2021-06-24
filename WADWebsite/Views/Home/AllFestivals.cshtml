@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Full Festival List";
+    ViewData["PageHeading"] = "Full Festival List";
+    
+}
+
+
+<section class="wrap">
+    @foreach (var item in Model)
+    {
+        <div class="festivalThumb">
+            <div>
+                <a asp-controller="Home" asp-action="OneFestival" asp-route-ID=@item.FestivalID>
+                    <img src="~/images/@item.FestivalImage" class ="cover" />
+                </a>
+                <h3>@item.FestivalName</h3>
+                @if(@item.TicketType.Contains("Day"))
+                {
+                    <h4>@item.TicketType @item.StartDate.ToString("dd/MM/yy")</h4>
+                }
+                else
+                {
+                    <h4>@item.TicketType</h4>
+                }
+
+                    <h4>£@item.TicketPrice</h4>
+            </div>
+        </div>
+    }
+</section>

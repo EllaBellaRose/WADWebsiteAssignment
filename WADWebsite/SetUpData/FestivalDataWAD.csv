@@ -1,0 +1,47 @@
+FestivalID,Festival Name,Location,Ticket Type,Start Date,End Date,Price,Camping Included,Lineup Link,FestivalImages
+1,Nass,Bristol,Weekend Ticket Adult,08/07/2021,11/07/2021,160,TRUE,https://www.nassfestival.com/lineup/,nassImage.jpg
+2,Nass,Bristol,Day Ticket Adult,09/07/2021,09/07/2021,50,FALSE,https://www.nassfestival.com/lineup/,nassImage.jpg
+3,Nass,Bristol,Day Ticket Adult,10/07/2021,10/07/2021,50,FALSE,https://www.nassfestival.com/lineup/,nassImage.jpg
+4,Nass,Bristol,Day Ticket Adult,11/07/2021,11/07/2021,50,FALSE,https://www.nassfestival.com/lineup/,nassImage.jpg
+5,Nass,Bristol,Day Ticket Child,09/07/2021,09/07/2021,30,FALSE,https://www.nassfestival.com/lineup/,nassImage.jpg
+6,Nass,Bristol,Day Ticket Child,10/07/2021,10/07/2021,30,FALSE,https://www.nassfestival.com/lineup/,nassImage.jpg
+7,Nass,Bristol,Day Ticket Child,11/07/2021,11/07/2021,30,FALSE,https://www.nassfestival.com/lineup/,nassImage.jpg
+8,Parklife,Manchester Heaton Park,Weekend Ticket,11/09/2021,12/09/2021,100,FALSE,,parklifeImage.jpg
+9,Parklife,Manchester Heaton Park,Day Ticket ,11/09/2021,11/09/2021,60,FALSE,,parklifeImage.jpg
+10,Parklife,Manchester Heaton Park,Day Ticket ,12/09/2021,12/09/2021,60,FALSE,,parklifeImage.jpg
+11,Boomtown,Hampshire,Weekend Ticket,12/08/2021,15/08/2021,250,TRUE,,boomtownImage.png
+12,Boomtown,Hampshire,Weekend Ticket with Early bird,11/08/2021,15/08/2021,280,TRUE,,boomtownImage.png
+13,Bassfest,Sheffield,Weekend Ticket,17/07/2021,18/07/2021,45,FALSE,,bassfestImage.jpg
+14,Bassfest,Sheffield,Day Ticket,17/07/2021,17/07/2021,25,FALSE,,bassfestImage.jpg
+15,Bassfest,Sheffield,Day Ticket,18/07/2021,18/07/2021,25,FALSE,,bassfestImage.jpg
+16,Leedsfest,Leeds,Weekend Ticket Adult,27/08/2021,29/08/2021,250,TRUE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+17,Leedsfest,Leeds,Weekend Ticket Child,27/08/2021,29/08/2021,180,TRUE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+18,Leedsfest,Leeds,Day Ticket Adult,27/08/2021,27/08/2021,90,FALSE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+19,Leedsfest,Leeds,Day Ticket Adult,28/08/2021,28/08/2021,90,FALSE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+20,Leedsfest,Leeds,Day Ticket Adult,29/08/2021,29/08/2021,90,FALSE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+21,Leedsfest,Leeds,Day Ticket Child,27/08/2021,27/08/2021,70,FALSE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+22,Leedsfest,Leeds,Day Ticket Child,28/08/2021,28/08/2021,70,FALSE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+23,Leedsfest,Leeds,Day Ticket Child,29/08/2021,29/08/2021,70,FALSE,https://www.leedsfestival.com/lineup#poster,leedsfestImage.png
+24,Reading fest,Reading,Weekend Ticket Adult,27/08/2021,29/08/2021,250,TRUE,https://www.readingfestival.com/lineup#poster,readingImage.png
+25,Reading fest,Reading,Weekend Ticket Child,27/08/2021,29/08/2021,180,TRUE,https://www.readingfestival.com/lineup#poster,readingImage.png
+26,Reading fest,Reading,Day Ticket Adult,27/08/2021,27/08/2021,90,FALSE,https://www.readingfestival.com/lineup#poster,readingImage.png
+27,Reading fest,Reading,Day Ticket Adult,28/08/2021,28/08/2021,90,FALSE,https://www.readingfestival.com/lineup#poster,readingImage.png
+28,Reading fest,Reading,Day Ticket Adult,29/08/2021,29/08/2021,90,FALSE,https://www.readingfestival.com/lineup#poster,readingImage.png
+29,Reading fest,Reading,Day Ticket Child,27/08/2021,27/08/2021,70,FALSE,https://www.readingfestival.com/lineup#poster,readingImage.png
+30,Reading fest,Reading,Day Ticket Child,28/08/2021,28/08/2021,70,FALSE,https://www.readingfestival.com/lineup#poster,readingImage.png
+31,Reading fest,Reading,Day Ticket Child,29/08/2021,29/08/2021,70,FALSE,https://www.readingfestival.com/lineup#poster,readingImage.png
+32,Neighbourhood weekender,Warrington,Full Weekend Ticket,03/09/2021,05/09/2021,140,FALSE,https://nbhdweekender.com/full-line-up-for-2020-revealed/,neighbourhoodWeekenderImage.jpg
+33,Neighbourhood weekender,Warrington,Weekend Ticket,04/09/2021,05/09/2021,90,FALSE,https://nbhdweekender.com/full-line-up-for-2020-revealed/,neighbourhoodWeekenderImage.jpg
+34,Neighbourhood weekender,Warrington,Day Ticket,03/09/2021,03/09/2021,50,FALSE,https://nbhdweekender.com/full-line-up-for-2020-revealed/,neighbourhoodWeekenderImage.jpg
+35,Neighbourhood weekender,Warrington,Day Ticket,04/09/2021,04/09/2021,50,FALSE,https://nbhdweekender.com/full-line-up-for-2020-revealed/,neighbourhoodWeekenderImage.jpg
+36,Neighbourhood weekender,Warrington,Day Ticket,05/09/2021,05/09/2021,50,FALSE,https://nbhdweekender.com/full-line-up-for-2020-revealed/,neighbourhoodWeekenderImage.jpg
+37,Creamfields,Warrington,4 Day Camping Ticket,26/08/2021,29/08/2021,250,TRUE,https://creamfields.com/lineup,creamfieldsImage.jpg
+38,Creamfields,Warrington,3 Day Camping Ticket,27/08/2021,29/08/2021,230,TRUE,https://creamfields.com/lineup,creamfieldsImage.jpg
+39,Creamfields,Warrington,2 Day Camping Ticket ,28/08/2021,29/08/2021,200,TRUE,https://creamfields.com/lineup,creamfieldsImage.jpg
+40,Creamfields,Warrington,Friday Day Ticket,26/08/2021,26/08/2021,75,FALSE,https://creamfields.com/lineup,creamfieldsImage.jpg
+41,Creamfields,Warrington,Saturday Day Ticket,27/08/2021,27/08/2021,95,FALSE,https://creamfields.com/lineup,creamfieldsImage.jpg
+42,Creamfields,Warrington,Sunday Day Ticket,29/08/2021,29/08/2021,100,FALSE,https://creamfields.com/lineup,creamfieldsImage.jpg
+43,Shindig,Dillington Estate,Weekend Ticket Adult,16/07/2021,18/07/2021,160,TRUE,,shindigImage.png
+44,Shindig,Dillington Estate,Weekend Ticket Teen,16/07/2021,18/07/2021,80,TRUE,,shindigImage.png
+45,Blue dot,Jodrel Banks Cheshire ,Weekend Ticket Adult,22/07/2021,25/07/2021,160,TRUE,,bluedotImage.png
+46,Blue dot,Jodrel Banks Cheshire ,Weekend Ticket Teen,22/07/2021,25/07/2021,90,TRUE,,bluedotImage.png

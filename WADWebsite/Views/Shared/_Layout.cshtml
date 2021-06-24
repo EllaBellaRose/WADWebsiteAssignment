@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: pink;
+        }
+     
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Regal Raverz</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    
+</head>
+    <body>
+        <header>
+           <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-white sticky">
+               <div class="container">
+
+                   <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Regal Raverz</a>
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                           aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                       <ul class="navbar-nav flex-grow-1">
+                           <li class="nav-item">
+                               <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AllFestivals">All Festivals</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Info">Company Infomation</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link text-dark" asp-area="" asp-controller="Security" asp-action="SignIn">Manage Account</a>
+                           </li>
+                       </ul>
+
+                   </div>
+                   <div class="searchBar">
+                       <form asp-controller="Home" asp-action="SearchPage" method="get">
+                           <input type="text" placeholder="Search Festival Name" name="searchString">
+                           <button type="submit"> search <i class="fa fa-search"></i></button>
+                       </form>
+                   </div>
+    
+                   <a asp-controller="Home" asp-action="ManageCart">
+                       <img src="~/images/shoppingCart.png" height="50" />
+                   </a>
+
+               </div>
+            </nav>
+        </header>
+        <main>
+
+            <div class="bodycontainer">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+
+                </main>
+            </div>
+        </main>
+            @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - WADWebsite Assignment
+            </div>
+        </footer>*@
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            @RenderSection("Scripts", required: false)
+        </body>
+</html>

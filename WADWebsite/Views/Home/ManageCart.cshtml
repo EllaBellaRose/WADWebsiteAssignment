@@ -1,0 +1,186 @@
+﻿@{
+
+    ViewData["Title"] = "Manage Cart";
+    ViewData["PageHeading"] = "Manage Cart";
+    decimal cartTotal = 0;
+
+}
+   
+    <section class="wrap">
+
+
+
+        
+    @if (ViewBag.msg != null)
+    {
+        <p class="msg">@ViewBag.msg</p>
+    }
+
+    <div class="shopping-cart"> 
+        <div class="cartItems">
+            <div class="title">
+                Shopping Bag
+            </div>
+            @if (Model.Count == 0)
+            {
+                <div class="emptyBag">
+                    <p>Shopping Cart Empty.</p>
+                </div>
+            }
+            else
+            {
+
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="item">
+                        <div class="buttons">
+                            <span class="delete-btn"></span>
+                        </div>
+
+                        <div class="image">
+                            <img src="~/images/@item.FestivalImage" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <span>@item.FestivalName</span>
+                            <span>@item.TicketType</span>
+                        </div>
+
+                        <div class="quantity">
+
+                            <form asp-controller="Home" asp-action="AddQuantity" method="post">
+                                <input type="hidden" value="@item.FestivalID" name="FestivalID" />
+                                <input type="submit" value="+" />
+                            </form>
+                            <input name="name" value="@item.OrderQuantity">
+                            <form asp-controller="Home" asp-action="MinusQuantity" method="post">
+                                <input type="hidden" value="@item.FestivalID" name="FestivalID" />
+                                <input type="submit" value="-" />
+                            </form>
+                        </div>
+
+                        <div class="total-price">£@((item.OrderQuantity * item.TicketPrice).ToString("0.00"))</div>
+                    </div>
+
+                 }
+            }
+
+        </div>
+        <div class="basket-price">
+
+            @foreach (var item in Model)
+            {
+                cartTotal = cartTotal + (item.OrderQuantity * item.TicketPrice);
+            }
+
+
+            <h3>Total Price: £@cartTotal.ToString("0.00")</h3>
+
+        </div>
+        
+    </div>
+
+     
+
+
+
+
+
+            <!-- WORKING OLD CODDE
+
+                       <button class="plus-btn" type="button" name="button">
+                                   x
+                                   <form>
+                                   </form>
+
+                               </button>
+
+
+
+               <div>
+
+                   @if (ViewBag.msg != null)
+                   {
+
+                       <p class="msg">@ViewBag.msg</p>
+
+                   }
+
+                   <table class="fullCart">
+
+                       <tr>
+
+                           <th>Name</th>
+
+                           <th>Ticket Type</th>
+
+                           <th>Price</th>
+
+                           <th>Quantity</th>
+
+                           <th>Cost</th>
+
+                           <th></th>
+
+                       </tr>
+
+                       @foreach (var item in Model)
+
+                       {
+
+                           cartTotal += item.OrderQuantity * item.TicketPrice;
+
+                   <tr>
+
+
+                       <td>@item.FestivalName</td>
+
+                       <td>@item.TicketType</td>
+
+                       <td>£@(item.TicketPrice.ToString("0.00"))</td>
+
+                       <td>@item.OrderQuantity</td>
+
+                       <td>£@((item.OrderQuantity * item.TicketPrice).ToString("0.00"))</td>
+
+                       <td>
+
+                           <form method="post" asp-action="RemoveCartItem">
+
+                               <input type="hidden" name="FestivalID" id="FestivalID" value="@item.FestivalID" />
+
+                               <input type="submit" value="Remove" />
+
+                           </form>
+
+                       </td>
+
+                   </tr>
+
+                       }
+
+                       <tr>
+
+                           <td></td>
+
+                           <td></td>
+
+                           <td></td>
+
+                           <td></td>
+
+                           <td>£@cartTotal.ToString("0.00")</td>
+
+                           <td></td>
+
+                       </tr>
+
+                   </table>
+
+               </div>
+
+               -->
+        }
+    </section>

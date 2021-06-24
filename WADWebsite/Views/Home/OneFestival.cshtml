@@ -1,0 +1,142 @@
+﻿
+@{
+    //@Model WADWebsite.Models.Festival
+    ViewData["Title"] = Model.FestivalName;
+
+
+}
+<style>
+    .body{ 
+        background-color:none;
+    }
+    .festContainer {
+        background-image: url("/images/@Model.FestivalImage");
+        background-size: 300px 300px;
+        background-repeat: repeat
+    }
+
+</style>
+
+<div class="festContainer">
+    <div class="festivalInfo">
+        <h1>Festival Details</h1>
+        <div class="festName"><h2>@Model.FestivalName</h2></div>
+        <div class="festTickType"><h3>@Model.TicketType</h3></div>
+        <div class="festPrice"><h3>£@Model.TicketPrice</h3></div>
+        @if (@Model.TicketType.Contains("Day"))
+        {
+            <div class="festDate"><h3>@Model.StartDate.ToString("dd/MM/yy")</h3></div>
+        }
+        else
+        {
+            <div class="festDate"><h3>@Model.StartDate.ToString("dd/MM/yy") to @Model.EndDate.ToString("dd/MM/yy")</h3></div>
+        }
+
+        @switch (Model.FestivalName)
+        {
+            case "Nass":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://www.nassfestival.com/lineup/';">Line Up</button></div>
+                break;
+
+            case "Parklife":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://parklife.uk.com/#lineup';">Line Up</button></div>
+                break;
+
+            case "Boomtown":
+                <div><h5>Lineup not released</h5></div>
+                break;
+
+            case "Bassfest":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://www.electronic-festivals.com/event/bassfest-summer-festival#:~:text=The%20current%20lineup%20is%20not%20out%20yet.%20These,Boy%2C%20Swifta%20Beater%2C%20Notion%2C%20Ts7%2C%20Hedex%2C%20Splash%2C%20Conducta';">Line Up</button></div>
+                break;
+
+            case "Leedsfest":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://www.leedsfestival.com/lineup#poster';">Line Up</button></div>
+                break;
+
+            case "Reading fest":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://www.readingfestival.com/lineup#poster';">Line Up</button></div>
+                break;
+
+            case "Neighbourhood weekender":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://nbhdweekender.com/';">Line Up</button></div>
+                break;
+
+            case "Creamfields":
+                <div><button class="glow-on-hover" onclick="window.location = 'https://creamfields.com/lineup';">Line Up</button></div>
+                break;
+
+            case "Shindig":
+                <div><h5>Lineup not released</h5></div>
+                break;
+
+            case "Blue dot":
+                <div><h5>Lineup not released</h5></div>
+                break;
+
+        }
+
+        <form asp-controller="Home" asp-action="FestivalDetails" method="post">
+
+            <input type="hidden" value="@Model.FestivalID" name="FestivalID" />
+            <input type="hidden" value="@Model.FestivalName" name="FestivalName" />
+            <input type="hidden" value="@Model.TicketType" name="TicketType" />
+            <input type="hidden" value="@Model.TicketPrice" name="TicketPrice" />
+            <input type="hidden" value="@Model.FestivalImage" name="FestivalImage" />
+            <button type="submit" class="glow-on-hover">Add to Cart</button>
+
+        </form>
+
+    </div>
+
+    @switch (Model.FestivalName)
+    {
+        case "Nass":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637430.0020997052!2d-2.4649563991512337!3d51.385395821308315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487224f11d035043%3A0xf288464399cdb6ee!2sThe%20Royal%20Bath%20%26%20West%20Showground!5e0!3m2!1sen!2snl!4v1623855954559!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Parklife":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37947.273138415665!2d-2.281086943605166!3d53.52733287316332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x83141b7c1fabbb4d!2sParklife%20Manchester!5e0!3m2!1sen!2snl!4v1623856356100!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Boomtown":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320507.56805667525!2d-1.3011661441605622!3d51.127546694510386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487413f62ef08e79%3A0x2c35a5c6c0eeb003!2sBoomtown%20Fair!5e0!3m2!1sen!2snl!4v1623856412154!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Bassfest":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9515.156607383038!2d-1.432573494178446!3d53.400711518816884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487977a40def6bcb%3A0xafec53ee7b27e229!2sDon%20Valley%20Bowl!5e0!3m2!1sen!2snl!4v1623856461127!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Leedsfest":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75313.4222629488!2d-1.4137304876702574!3d53.85096599639972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8cc467707b2fe52f!2sBramham%20Park!5e0!3m2!1sen!2snl!4v1623856587932!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Reading fest":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9943.074434791015!2d-1.0002752423139875!3d51.46240470275564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48769bac1a0a80f5%3A0x6840f8c838af189e!2sDrayton%20D%20A!5e0!3m2!1sen!2snl!4v1623856969720!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Neighbourhood weekender":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1189.883243455457!2d-2.5762377737824144!3d53.38322749497217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b021f9f9565a9%3A0xd93ee661aab20b7b!2sVictoria%20Park%2C%20Warrington%2C%20UK!5e0!3m2!1sen!2snl!4v1623857200848!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Creamfields":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.8065973536886!2d-2.628691548156107!3d53.34671817988085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487afd9dd31799cd%3A0xe663de86de4a1848!2sCreamfields%20Festival!5e0!3m2!1sen!2snl!4v1623857252230!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Shindig":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321188.92535434564!2d-3.2385553330707135!3d51.02929246772571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487273ae9eb4ce4f%3A0xce4bd029d77d80f9!2sShindig%20Festival!5e0!3m2!1sen!2snl!4v1623857305176!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+        case "Blue dot":
+            <iframe class="festivalMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152769.08711288692!2d-2.434509159089362!3d53.25339564869691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a50fc0f5723ed%3A0xa1d78d08f23bd37c!2sJodrell%20Bank%20Discovery%20Centre!5e0!3m2!1sen!2snl!4v1623857407415!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            break;
+
+    }
+   
+</div>
+
+
+@*<div class="festivalLogo">
+        <img src="~/images/@Model.FestivalImage" class="center" />
+    </div>*@
+

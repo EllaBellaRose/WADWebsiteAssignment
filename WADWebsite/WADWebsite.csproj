@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\bassfestImage.jpg" />
+    <None Include="wwwroot\images\bluedotImage.png" />
+    <None Include="wwwroot\images\boomtownImage.png" />
+    <None Include="wwwroot\images\creamfieldsImage.jpg" />
+    <None Include="wwwroot\images\leedsfestImage.png" />
+    <None Include="wwwroot\images\nassImage.jpg" />
+    <None Include="wwwroot\images\neighbourhoodWeekenderImage.jpg" />
+    <None Include="wwwroot\images\parklifeImage.jpg" />
+    <None Include="wwwroot\images\readingImage.png" />
+    <None Include="wwwroot\images\shindigImage.png" />
+  </ItemGroup>
+
+</Project>
