@@ -31,7 +31,7 @@ nav.navbar {
     background-color: pink;
     border-color: white;
     border-width: 10px;
-    position: fixed;
+    /*position: fixed;*/
     width: 100vw;
 
 }

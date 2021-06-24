@@ -22,6 +22,14 @@
         <h1>Festival Details</h1>
         <div class="festName"><h2>@Model.FestivalName</h2></div>
         <div class="festTickType"><h3>@Model.TicketType</h3></div>
+        @if (Model.CampingIncluded == true)
+        {
+            <div><h3>Camping included</h3></div>
+        }
+        else
+        {
+            <div><h3>Camping not included</h3></div>
+        }
         <div class="festPrice"><h3>£@Model.TicketPrice</h3></div>
         @if (@Model.TicketType.Contains("Day"))
         {
